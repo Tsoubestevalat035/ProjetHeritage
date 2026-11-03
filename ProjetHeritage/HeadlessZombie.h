@@ -6,8 +6,6 @@
 class HeadlessZombie : public Ennemies
 {
 public:
-    bool dumb = true;
-
     HeadlessZombie()
     {
         life = 40;

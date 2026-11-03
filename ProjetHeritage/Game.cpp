@@ -2,16 +2,14 @@
 #include <iostream>
 #include "conio.h"
 #include "Player.h"
+
 void Game::run() {
     std::cout << "Le jeu est lance avec succes !" << std::endl;
-}
-
-int main() {
 
     Player monjoueur;
     char touche;
 
-    std::cout << "positon de départ : X = " << monjoueur.getX() << ", Y = " << monjoueur.getY() << std::endl;
+    std::cout << "positon de depart : X = " << monjoueur.getX() << ", Y = " << monjoueur.getY() << std::endl;
 
     while (true) {
 
@@ -19,12 +17,15 @@ int main() {
 
         if (touche == 'a' || touche == 'A') {
             break;
-
         }
     }
 
     monjoueur.deplacer(touche);
 
-    std::cout << "nouvelle position -> X = " << monjoueur.getX() << " , Y = " << monjoueur.getY() << std::endl;
+    std::cout << "nouvelle position -> X = " << monjoueur.getX() << " , Y = " << monjoueur.getY() <<std::endl;
 
 }
+
+
+
+

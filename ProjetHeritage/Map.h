@@ -1,10 +1,15 @@
 #pragma once
-
 #include <string>
+
+
 
 class Map
 {
 public:
+	int const NBLIGNES = 10;
+	int const NBCOLONNES = 20;
+	int const NBCASES = NBLIGNES * NBCOLONNES;
+
     void creationcarte() const;
 
 private:

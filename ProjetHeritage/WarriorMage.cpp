@@ -1,0 +1,2 @@
+
+#include "WarriorMage.h"

@@ -139,7 +139,23 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ennemies.cpp" />
+    <ClCompile Include="Entities.cpp" />
+    <ClCompile Include="HeadlessZombie.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="ProjetHeritage.cpp" />
+    <ClCompile Include="Swimmer.cpp" />
+    <ClCompile Include="Zombie.cpp" />
+    <ClCompile Include="ZombieSwimmer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ennemies.h" />
+    <ClInclude Include="Entities.h" />
+    <ClInclude Include="HeadlessZombie.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Swimmer.h" />
+    <ClInclude Include="Zombie.h" />
+    <ClInclude Include="ZombieSwimmer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

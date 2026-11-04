@@ -3,26 +3,26 @@
 
 Player::Player() {
 
-	positionX = 10;
-	positionY = 10;
+	positionX = 0;
+	positionY = 0;
 }
 
 void Player::deplacer(char touche) {
 
 	if (touche == 'z' || touche == 'Z') {
-		positionY = positionY - 1;
+		positionY--;
 	}
 
 	if (touche == 's' || touche == 'S') {
-		positionY = positionY + 1;
+		positionY++;
 	}
 
 	if (touche == 'q' || touche == 'Q') {
-		positionX = positionX - 1;
+		positionX--;
 	}
 
 	if (touche == 'd' || touche == 'D') {
-		positionX = positionX + 1;
+		positionX++;
 	}
 }
 

@@ -11,7 +11,7 @@ public:
 	int const NBCASES = NBLIGNES * NBCOLONNES;
 	int NBbloques = 3;
 
-    void creationcarte() const;
+    void creationcarte(int JoueurX, int JoueurY) const;
 
 private:
     std::string indexbloque[3] = { " . ", "AAA", "~~~" };

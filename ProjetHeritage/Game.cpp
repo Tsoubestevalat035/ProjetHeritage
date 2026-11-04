@@ -16,6 +16,7 @@ void Game::run() {
 
     while (true) {
         const char touche = _getch();
+        std::system("cls");
 
         if (touche == 27) {
             break;

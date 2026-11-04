@@ -7,23 +7,33 @@ void Game::run() {
     std::cout << "Le jeu est lance avec succes !" << std::endl;
 
     Player monjoueur;
-    char touche;
 
-    std::cout << "positon de depart : X = " << monjoueur.getX() << ", Y = " << monjoueur.getY() << std::endl;
+    std::cout << "Position de depart : X = "
+              << monjoueur.getX()
+              << ", Y = "
+              << monjoueur.getY()
+              << std::endl;
 
     while (true) {
+        const char touche = _getch();
 
-        touche = _getch();
-
-        if (touche == 'a' || touche == 'A') {
+        if (touche == 27) {
             break;
         }
+
+        if (touche == 'z' || touche == 'Z' ||
+            touche == 'q' || touche == 'Q' ||
+            touche == 's' || touche == 'S' ||
+            touche == 'd' || touche == 'D') {
+            monjoueur.deplacer(touche);
+
+            std::cout << "Nouvelle position -> X = "
+                      << monjoueur.getX()
+                      << ", Y = "
+                      << monjoueur.getY()
+                      << std::endl;
+        }
     }
-
-    monjoueur.deplacer(touche);
-
-    std::cout << "nouvelle position -> X = " << monjoueur.getX() << " , Y = " << monjoueur.getY() <<std::endl;
-
 }
 
 

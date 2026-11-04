@@ -26,7 +26,7 @@ void Game::run() {
             touche == 'q' || touche == 'Q' ||
             touche == 's' || touche == 'S' ||
             touche == 'd' || touche == 'D') {
-            monjoueur.deplacer(touche);
+            monjoueur.clavier(touche);
 
             std::cout << "Nouvelle position -> X = "
                       << monjoueur.getX()

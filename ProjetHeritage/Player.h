@@ -15,8 +15,9 @@ public:
 
 	Player();
 
-	void deplacer(char touche);
+	void clavier (char touche);
 
 	int getX() const;
 	int getY() const;
+	void deplacer(int JoueurX, int JoueurY);
 };

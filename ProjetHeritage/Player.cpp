@@ -1,5 +1,4 @@
 #include "Player.h"
-#include <iostream>
 
 Player::Player() {
 
@@ -7,7 +6,7 @@ Player::Player() {
 	positionY = 0;
 }
 
-void Player::deplacer(char touche) {
+void Player::clavier(char touche) {
 
 	if (touche == 'z' || touche == 'Z') {
 		positionY--;
@@ -28,3 +27,9 @@ void Player::deplacer(char touche) {
 
 int Player::getX() const { return positionX; }
 int Player::getY() const { return positionY; }
+
+
+void Player::deplacer(int JoueurX, int JoueurY) {
+	positionX = JoueurX;
+	positionY = JoueurY;
+}

@@ -3,12 +3,14 @@
 #include "conio.h"
 #include "Player.h"
 #include "Map.h"
+#include "Ennemies.h"
 
 void Game::run() {
     std::cout << "Le jeu est lance avec succes !" << std::endl;
 
     Player monjoueur;
 	Map macarte;
+
 
     std::cout << "Position de depart : X = "
               << monjoueur.getX()
@@ -18,9 +20,9 @@ void Game::run() {
 
     while (true) {
         const char touche = _getch();
+
         std::system("cls");
 
-        macarte.creationcarte(monjoueur.getX(), monjoueur.getY());
 
         if (touche == 27) {
             break;
@@ -37,10 +39,9 @@ void Game::run() {
                       << ", Y = "
                       << monjoueur.getY()
                       << std::endl;
+
+			macarte.creationcarte(monjoueur.getX(), monjoueur.getY()); //affiche la carte avec les entité qui la compose
+
         }
     }
 }
-
-
-
-

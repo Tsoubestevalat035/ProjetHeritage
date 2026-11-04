@@ -3,15 +3,13 @@
 #include "Ennemies.h"
 #include <cstdlib>
 
-class Zombie : public Ennemies, public Entities
+class Zombie : public Ennemies
 {
 public:
     Zombie()
     {
         life = 80;
         power = 30;
-        X = 0;
-		Y = 0;
     }
 
     void move(int PlayerX, int PlayerY) override
@@ -23,20 +21,20 @@ public:
 
         switch (direction)
         {
-		case 0: // Move up
-            Y--;
+        case 0:
+            positionEnnemi().Y--;
             break;
 
-		case 1: // Move down
-            Y++;
+        case 1:
+            positionEnnemi().Y++;
             break;
 
-		case 2: // Move left
-            X--;
+        case 2:
+            positionEnnemi().X--;
             break;
 
-		case 3: // Move right
-            X++;
+        case 3:
+            positionEnnemi().X++;
             break;
         }
     }

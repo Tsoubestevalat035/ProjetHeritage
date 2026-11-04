@@ -14,7 +14,7 @@ void Map::creationcarte(int JoueurX, int JoueurY) const
             }
             else
             {
-                std::cout << indexbloque[tableau[i * 20 + j]];
+                std::cout << indexbloque[carte[i * 20 + j]];
             }
         }
         std::cout << '\n';

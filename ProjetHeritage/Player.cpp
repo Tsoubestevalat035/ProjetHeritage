@@ -1,30 +1,40 @@
 #include "Player.h"
 #include <iostream>
 
-Player::Player() {
-
-	positionX = 0;
-	positionY = 0;
+Player::Player()
+{
+    positions.Player = { 0, 0 };
 }
 
-void Player::deplacer(char touche) {
+void Player::deplacer(char touche)
+{
+    if (touche == 'z' || touche == 'Z')
+    {
+        positions.Player.Y--;
+    }
 
-	if (touche == 'z' || touche == 'Z') {
-		positionY--;
-	}
+    if (touche == 's' || touche == 'S')
+    {
+        positions.Player.Y++;
+    }
 
-	if (touche == 's' || touche == 'S') {
-		positionY++;
-	}
+    if (touche == 'q' || touche == 'Q')
+    {
+        positions.Player.X--;
+    }
 
-	if (touche == 'q' || touche == 'Q') {
-		positionX--;
-	}
-
-	if (touche == 'd' || touche == 'D') {
-		positionX++;
-	}
+    if (touche == 'd' || touche == 'D')
+    {
+        positions.Player.X++;
+    }
 }
 
-int Player::getX() const { return positionX; }
-int Player::getY() const { return positionY; }
+int Player::getX() const
+{
+    return positions.Player.X;
+}
+
+int Player::getY() const
+{
+    return positions.Player.Y;
+}

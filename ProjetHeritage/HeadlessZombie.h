@@ -3,42 +3,40 @@
 #include "Ennemies.h"
 #include <cstdlib>
 
-class HeadlessZombie : public Ennemies, public Entities
+class HeadlessZombie : public Ennemies
 {
 public:
     HeadlessZombie()
     {
         life = 40;
         power = 60;
-        X = 0;
-        Y = 0;
     }
 
     void move(int PlayerX, int PlayerY) override
     {
-        int differenceX = PlayerX - X;
-        int differenceY = PlayerY - Y;
+        int differenceX = PlayerX - positionEnnemi().X;
+        int differenceY = PlayerY - positionEnnemi().Y;
 
         if (std::abs(differenceX) >= std::abs(differenceY))
         {
             if (differenceX > 0)
             {
-                X++;
+                positionEnnemi().X++;
             }
             else if (differenceX < 0)
             {
-                X--;
+                positionEnnemi().X--;
             }
         }
         else
         {
             if (differenceY > 0)
             {
-                Y++;
+                positionEnnemi().Y++;
             }
             else if (differenceY < 0)
             {
-                Y--;
+                positionEnnemi().Y--;
             }
         }
     }

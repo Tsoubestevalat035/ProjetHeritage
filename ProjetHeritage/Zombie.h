@@ -6,35 +6,36 @@
 class Zombie : public Ennemies
 {
 public:
-    Zombie()
+    Zombie(int index)
+        : Ennemies(index)
     {
         life = 80;
         power = 30;
     }
 
-    void move(int PlayerX, int PlayerY) override
+    void move(int joueurX, int joueurY) override
     {
-        (void)PlayerX;
-        (void)PlayerY;
+        (void)joueurX;
+        (void)joueurY;
 
         int direction = std::rand() % 4;
 
         switch (direction)
         {
         case 0:
-            positionEnnemi().Y--;
+            position().Y--;
             break;
 
         case 1:
-            positionEnnemi().Y++;
+            position().Y++;
             break;
 
         case 2:
-            positionEnnemi().X--;
+            position().X--;
             break;
 
         case 3:
-            positionEnnemi().X++;
+            position().X++;
             break;
         }
     }

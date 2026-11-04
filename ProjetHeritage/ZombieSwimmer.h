@@ -1,14 +1,15 @@
 #pragma once
+
 #include "Swimmer.h"
 #include "Zombie.h"
 
-class ZombieSwimmer : Zombie, Swimmer
+class ZombieSwimmer : public Zombie, public Swimmer
 {
-public:;
-      ZombieSwimmer()
-      {
-          life = 40;
-          power = 60;
-      }
+public:
+    ZombieSwimmer(int index)
+        : Zombie(index)
+    {
+        life = 40;
+        power = 60;
+    }
 };
-

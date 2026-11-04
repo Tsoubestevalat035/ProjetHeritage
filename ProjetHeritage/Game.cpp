@@ -40,7 +40,7 @@ void Game::run() {
                       << monjoueur.getY()
                       << std::endl;
 
-			macarte.creationcarte(monjoueur.getX(), monjoueur.getY()); //affiche la carte avec les entité qui la compose
+			macarte.creationcarte(monjoueur.getX(), monjoueur.getY()); //affiche la carte avec les entitées qui la compose
 
         }
     }

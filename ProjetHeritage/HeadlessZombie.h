@@ -6,38 +6,31 @@
 class HeadlessZombie : public Ennemies
 {
 public:
-    HeadlessZombie()
+    HeadlessZombie(int index)
+        : Ennemies(index)
     {
         life = 40;
         power = 60;
     }
 
-    void move(int PlayerX, int PlayerY) override
+    void move(int joueurX, int joueurY) override
     {
-        int differenceX = PlayerX - positionEnnemi().X;
-        int differenceY = PlayerY - positionEnnemi().Y;
+        int differenceX = joueurX - position().X;
+        int differenceY = joueurY - position().Y;
 
         if (std::abs(differenceX) >= std::abs(differenceY))
         {
             if (differenceX > 0)
-            {
-                positionEnnemi().X++;
-            }
+                position().X++;
             else if (differenceX < 0)
-            {
-                positionEnnemi().X--;
-            }
+                position().X--;
         }
         else
         {
             if (differenceY > 0)
-            {
-                positionEnnemi().Y++;
-            }
+                position().Y++;
             else if (differenceY < 0)
-            {
-                positionEnnemi().Y--;
-            }
+                position().Y--;
         }
     }
 };

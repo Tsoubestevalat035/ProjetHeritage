@@ -4,30 +4,27 @@
 
 class Ennemies : public Entities
 {
-public:
-    Ennemies()
-        : indexEnnemi(prochainIndexEnnemi++ % 5)
+protected:
+    int indexEnnemi;
+
+    V2D& position()
     {
+        return positions.ennemies[indexEnnemi];
+    }
+
+public:
+    Ennemies(int index)
+    {
+        indexEnnemi = index;
         positions.ennemies[indexEnnemi] = { 0, 0 };
     }
 
-    virtual void move(int PlayerX, int PlayerY) = 0;
+    virtual void move(int joueurX, int joueurY) = 0;
 
     const V2D& getPosition() const
     {
         return positions.ennemies[indexEnnemi];
     }
-
     int life = 100;
     int power = 50;
-
-protected:
-    V2D& positionEnnemi()
-    {
-        return positions.ennemies[indexEnnemi];
-    }
-
-private:
-    int indexEnnemi;
-    inline static int prochainIndexEnnemi = 0;
 };

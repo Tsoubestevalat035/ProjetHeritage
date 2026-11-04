@@ -11,11 +11,10 @@ public:
 
     struct entitées
     {
-        V2D ennemies[5]{};
-        V2D Player{};
+        V2D ennemies[5];
+        V2D Player;
     };
 
 protected:
-    // Structure partagée par le joueur et les ennemis
     inline static entitées positions{};
 };

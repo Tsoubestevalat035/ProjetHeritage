@@ -1,15 +1,17 @@
 #pragma once
-
+#include "Entities.h"
 #include "Ennemies.h"
 #include <cstdlib>
 
-class Zombie : public Ennemies
+class Zombie : public Ennemies, public Entities
 {
 public:
     Zombie()
     {
         life = 80;
         power = 30;
+        X = 0;
+		Y = 0;
     }
 
     void move(int PlayerX, int PlayerY) override

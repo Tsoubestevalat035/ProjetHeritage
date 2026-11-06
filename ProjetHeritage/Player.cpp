@@ -3,38 +3,38 @@
 
 Player::Player()
 {
-    positions.Player = { 0, 0 };
+    positions.player = { 0, 0 };
 }
 
 void Player::deplacer(char touche)
 {
     if (touche == 'z' || touche == 'Z')
     {
-        positions.Player.Y--;
+        positions.player.Y--;
     }
 
     if (touche == 's' || touche == 'S')
     {
-        positions.Player.Y++;
+        positions.player.Y++;
     }
 
     if (touche == 'q' || touche == 'Q')
     {
-        positions.Player.X--;
+        positions.player.X--;
     }
 
     if (touche == 'd' || touche == 'D')
     {
-        positions.Player.X++;
+        positions.player.X++;
     }
 }
 
 int Player::getX() const
 {
-    return positions.Player.X;
+    return positions.player.X;
 }
 
 int Player::getY() const
 {
-    return positions.Player.Y;
+    return positions.player.Y;
 }

@@ -9,12 +9,12 @@ public:
         int Y = 0;
     };
 
-    struct entitées
+    struct Entites
     {
-        V2D ennemies[5];
-        V2D Player;
+        V2D ennemies[5]{};
+        V2D player{};
     };
 
 protected:
-    inline static entitées positions{};
+    Entites positions{};
 };

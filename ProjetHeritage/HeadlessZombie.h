@@ -6,8 +6,8 @@
 class HeadlessZombie : public Ennemies
 {
 public:
-    HeadlessZombie(int index)
-        : Ennemies(index)
+    HeadlessZombie(int index, int x, int y)
+        : Ennemies(index, x, y)
     {
         life = 40;
         power = 60;

@@ -13,11 +13,13 @@ protected:
     }
 
 public:
-    Ennemies(int index)
+    Ennemies(int index, int x, int y)
+        : indexEnnemi(index)
     {
-        indexEnnemi = index;
-        positions.ennemies[indexEnnemi] = { 0, 0 };
+        positions.ennemies[indexEnnemi] = { x, y };
     }
+
+    virtual ~Ennemies() = default;
 
     virtual void move(int joueurX, int joueurY) = 0;
 
@@ -25,6 +27,17 @@ public:
     {
         return positions.ennemies[indexEnnemi];
     }
+
+    int getX() const
+    {
+        return getPosition().X;
+    }
+
+    int getY() const
+    {
+        return getPosition().Y;
+    }
+
     int life = 100;
     int power = 50;
 };

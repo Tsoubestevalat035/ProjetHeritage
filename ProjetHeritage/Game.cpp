@@ -4,12 +4,27 @@
 #include "Player.h"
 #include "Map.h"
 #include "Ennemies.h"
+#include "ZombieSwimmer.h"
+#include "Zombie.h"
+#include "Swimmer.h"
+#include "HeadlessZombie.h"
 
 void Game::run() {
     std::cout << "Le jeu est lance avec succes !" << std::endl;
 
     Player monjoueur;
 	Map macarte;
+    Zombie monzombie(0, 5, 2);
+    HeadlessZombie monHeadless(1, 10, 2);
+    ZombieSwimmer monSwimmer(2, 15, 2);
+
+    Ennemies* ennemis[] =
+    {
+        &monzombie,
+        &monHeadless,
+        &monSwimmer
+    };
+    
 
 
     std::cout << "Position de depart : X = "
@@ -40,8 +55,16 @@ void Game::run() {
                       << monjoueur.getY()
                       << std::endl;
 
-			macarte.creationcarte(monjoueur.getX(), monjoueur.getY()); //affiche la carte avec les entitées qui la compose
+			for (int i = 0; i < 3; i++) {
+                ennemis[i]->move(monjoueur.getX(), monjoueur.getY());
+            }
 
+            macarte.creationcarte(
+                monjoueur.getX(),
+                monjoueur.getY(),
+                ennemis,
+                3
+            );
         }
     }
 }

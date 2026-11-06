@@ -18,7 +18,7 @@ public:
         int nombreEnnemis
     ) const;
 
-private:
+
     std::string indexbloque[3] = { " . ", "AAA", "~~~" };
 
     int carte[NBCASES]

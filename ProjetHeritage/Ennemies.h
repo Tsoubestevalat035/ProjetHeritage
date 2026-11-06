@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Entities.h"
+#include "Map.h"
 
 class Ennemies : public Entities
 {
@@ -9,7 +10,10 @@ protected:
 
     V2D& position()
     {
-        return positions.ennemies[indexEnnemi];
+        if (true)
+        {
+            return positions.ennemies[indexEnnemi];
+        }
     }
 
 public:

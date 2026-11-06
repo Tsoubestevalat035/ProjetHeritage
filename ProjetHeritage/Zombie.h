@@ -13,11 +13,10 @@ public:
         power = 30;
     }
 
-	void correctionposition()
+	void correctionposition(const int carte[])
 	{
 		
 	}
-
     void move(int joueurX, int joueurY) override
     {
         (void)joueurX;

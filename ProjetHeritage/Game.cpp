@@ -59,6 +59,8 @@ void Game::run() {
                 ennemis[i]->move(monjoueur.getX(), monjoueur.getY());
             }
 
+            monzombie.correctionposition(macarte.carte);
+
             macarte.creationcarte(
                 monjoueur.getX(),
                 monjoueur.getY(),

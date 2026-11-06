@@ -5,7 +5,7 @@
 class Map
 {
 public:
-    void creationcarte() const;
+    void creationcarte(int niveau) {
 
 private:
     std::string indexbloque[3] = { " . ", "AAA", "~~~" };

@@ -37,12 +37,34 @@ void Map::creationcarte(
                 }
             }
 
-            if (!affiche)
-            {
-                std::cout << indexbloque[carte[y * NBCOLONNES + x]];
-            }
-        }
+			if (!affiche)
+			{
+				std::cout << indexbloque[cartes[indexcarte][y * NBCOLONNES + x]];
+			}
+		}
 
-        std::cout << '\n';
+		std::cout << '\n';
+	}
+}
+void Map::changerCarte(
+	int  joueurX,
+	int  joueurY
+)
+{
+	if (joueurX < 0 || joueurX >= NBCOLONNES ||
+		joueurY < 0 || joueurY >= NBLIGNES ||
+		indexcarte < 0 || indexcarte >= NB_CARTES - 1)
+	{
+		return;
+	}
+
+	const int indexCase = joueurY * NBCOLONNES + joueurX;
+	if (cartes[indexcarte][indexCase] == 3)
+	{
+		indexcarte++;
+	}
+    if (indexcarte == 2)
+    {
+        std::cout << "dernier niveau du jeu, pas de possiblité de retou en arriere \n";
     }
 }

@@ -8,6 +8,8 @@ class Player : public Entities
 {
 public:
     Player();
+	int X = 0;
+	int Y = 0;
 
     void deplacer(char touche);
 
